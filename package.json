@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "coverage": "nyc --require babel-register --reporter=lcov --reporter=text-lcov node ./ && nyc report"
+    "alt_coverage": "babel index.js > index.transformed.js && nyc --reporter=lcov --reporter=text node ./index.transformed.js",
+    "coverage": "nyc --require babel-register --reporter=lcov --reporter=text node ./"
   },
   "author": "",
   "license": "ISC",
